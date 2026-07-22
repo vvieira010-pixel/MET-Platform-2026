@@ -1,0 +1,951 @@
+{
+  "schemaVersion": "2.0",
+  "contentType": "met_listening_skills_bank",
+  "title": "MET Listening Skills Pack",
+  "subtitle": "Authentic B2 Listening exercises: Part 1 (Short Conversations), Part 2 (Longer Dialogues), and Part 3 (Short Talks)",
+  "level": "B2",
+  "modules": [
+    {
+      "id": "listening_part1",
+      "title": "Listening Part 1: Short Conversations",
+      "levelRange": "B2",
+      "skill": "listening",
+      "moduleType": "listening_set",
+      "items": [
+        {
+          "id": "P1_01",
+          "script": "Woman: Did the professor cancel the review session?\nMan: No, he just moved it to Friday afternoon.",
+          "questions": [
+            {
+              "stem": "What does the man say about the review session?",
+              "options": [
+                "It was canceled.",
+                "It was postponed.",
+                "It was shortened.",
+                "It was recorded."
+              ],
+              "correct": 1,
+              "explanation": "The man says he 'just moved it to Friday afternoon', which implies a postponement."
+            }
+          ],
+          "audioFile": "listening-p1_01-woman-did-the-professor-cance.mp3"
+        },
+        {
+          "id": "P1_02",
+          "script": "Man: I tried to print my paper in the library, but the printer was out of paper.\nWoman: There’s another one on the second floor.",
+          "questions": [
+            {
+              "stem": "Why couldn’t the man print his paper?",
+              "options": [
+                "He forgot his password.",
+                "The library was closed.",
+                "The printer had no paper.",
+                "The paper was too long."
+              ],
+              "correct": 2,
+              "explanation": "The man explicitly mentions 'the printer was out of paper'."
+            }
+          ],
+          "audioFile": "listening-p1_02-man-i-tried-to-print-my-paper.mp3"
+        },
+        {
+          "id": "P1_03",
+          "script": "Woman: I thought the meeting started at ten.\nMan: It did, but they delayed it because the manager was late.",
+          "questions": [
+            {
+              "stem": "Why was the meeting delayed?",
+              "options": [
+                "The room was unavailable.",
+                "The manager arrived late.",
+                "The speakers were absent.",
+                "The woman had the wrong day."
+              ],
+              "correct": 1,
+              "explanation": "The man explains the delay was due to the manager being late."
+            }
+          ],
+          "audioFile": "listening-p1_03-woman-i-thought-the-meeting-s.mp3"
+        },
+        {
+          "id": "P1_04",
+          "script": "Man: Are you still going to the bookstore after class?\nWoman: I was, but I already ordered the book online.",
+          "questions": [
+            {
+              "stem": "What changed the woman’s plan?",
+              "options": [
+                "The store closed early.",
+                "She borrowed the book.",
+                "She found the book online.",
+                "She no longer needs the book."
+              ],
+              "correct": 2,
+              "explanation": "The woman mentions she 'already ordered the book online'."
+            }
+          ],
+          "audioFile": "listening-p1_04-man-are-you-still-going-to-th.mp3"
+        },
+        {
+          "id": "P1_05",
+          "script": "Woman: I can’t believe the restaurant is full again.\nMan: We should have made a reservation this morning.",
+          "questions": [
+            {
+              "stem": "What does the man suggest?",
+              "options": [
+                "The food is not good.",
+                "They arrived too early.",
+                "They should wait outside.",
+                "They should have reserved a table."
+              ],
+              "correct": 3,
+              "explanation": "The man suggests they should have made a reservation earlier."
+            }
+          ],
+          "audioFile": "listening-p1_05-woman-i-cant-believe-the-res.mp3"
+        },
+        {
+          "id": "P1_06",
+          "script": "Man: Your presentation was really clear.\nWoman: Thanks. I was nervous, so I practiced it three times last night.",
+          "questions": [
+            {
+              "stem": "Why did the woman practice her presentation?",
+              "options": [
+                "She had extra free time.",
+                "She felt nervous.",
+                "Her teacher asked her to.",
+                "She wanted to shorten it."
+              ],
+              "correct": 1,
+              "explanation": "She explicitly states she was nervous, which led her to practice."
+            }
+          ],
+          "audioFile": "listening-p1_06-man-your-presentation-was-rea.mp3"
+        },
+        {
+          "id": "P1_07",
+          "script": "Woman: Did you return the movie to Alex?\nMan: Not yet. He said I can bring it to his office tomorrow.",
+          "questions": [
+            {
+              "stem": "What will the man probably do tomorrow?",
+              "options": [
+                "Watch the movie again.",
+                "Lend the movie to the woman.",
+                "Return the movie to Alex.",
+                "Buy a new movie."
+              ],
+              "correct": 2,
+              "explanation": "The man mentions he can bring the movie to Alex's office tomorrow."
+            }
+          ],
+          "audioFile": "listening-p1_07-woman-did-you-return-the-movi.mp3"
+        },
+        {
+          "id": "P1_08",
+          "script": "Man: I’m surprised Jenna drove to work today.\nWoman: Her bike is being repaired, so she had no choice.",
+          "questions": [
+            {
+              "stem": "Why did Jenna drive to work?",
+              "options": [
+                "She was running late.",
+                "Her bike was unavailable.",
+                "It was raining heavily.",
+                "She needed to carry boxes."
+              ],
+              "correct": 1,
+              "explanation": "Jenna's bike is being repaired, making it unavailable."
+            }
+          ],
+          "audioFile": "listening-p1_08-man-im-surprised-jenna-drove.mp3"
+        },
+        {
+          "id": "P1_09",
+          "script": "Woman: This soup tastes much better than the one we had last week.\nMan: I know. This time the chef added more spices.",
+          "questions": [
+            {
+              "stem": "Why does the soup taste better this time?",
+              "options": [
+                "It is hotter.",
+                "It was served earlier.",
+                "It has more spices.",
+                "It is a different kind of soup."
+              ],
+              "correct": 2,
+              "explanation": "The man says the chef added more spices this time."
+            }
+          ],
+          "audioFile": "listening-p1_09-woman-this-soup-tastes-much-b.mp3"
+        },
+        {
+          "id": "P1_10",
+          "script": "Man: I was going to take the bus, but my brother offered me a ride.\nWoman: That’s good. The buses are moving very slowly because of the parade.",
+          "questions": [
+            {
+              "stem": "Why is the bus slow today?",
+              "options": [
+                "There was an accident.",
+                "The driver is new.",
+                "The weather is bad.",
+                "There is a parade."
+              ],
+              "correct": 3,
+              "explanation": "The woman notes that the buses are moving slowly because of the parade."
+            }
+          ],
+          "audioFile": "listening-p1_10-man-i-was-going-to-take-the-b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "listening_part2",
+      "title": "Listening Part 2: Longer Conversations",
+      "levelRange": "B2",
+      "skill": "listening",
+      "moduleType": "listening_set",
+      "items": [
+        {
+          "id": "P2_01",
+          "script": "Woman: I’m looking for a laptop for university, but I don’t know which one to choose.\nMan: What will you use it for mostly?\nWoman: Writing papers, joining online classes, and maybe some light photo editing.\nMan: Then you probably don’t need the most expensive model. This one is lighter, has a long battery life, and is on sale today.\nWoman: That sounds good, but I’m worried the screen is too small.\nMan: In that case, look at this one. It costs a little more, but the screen is larger and the keyboard is more comfortable.\nWoman: I think that’s the better option. Can I pay in installments?\nMan: Yes, up to six monthly payments.",
+          "questions": [
+            {
+              "stem": "Why does the woman need a laptop?",
+              "options": [
+                "For travel",
+                "For university",
+                "For gaming",
+                "For office work"
+              ],
+              "correct": 1,
+              "explanation": "She says she is looking for a laptop for university."
+            },
+            {
+              "stem": "Why does the man first recommend the cheaper model?",
+              "options": [
+                "It has better speakers.",
+                "It is the newest model.",
+                "It matches her basic needs.",
+                "It includes free software."
+              ],
+              "correct": 2,
+              "explanation": "The lighter, cheaper model matches her mentioned needs (writing, online classes, photo editing) without needing the 'most expensive model'."
+            },
+            {
+              "stem": "Why does the woman hesitate?",
+              "options": [
+                "The battery is too weak.",
+                "The screen may be too small.",
+                "The color is not available.",
+                "The keyboard is broken."
+              ],
+              "correct": 1,
+              "explanation": "She says, 'I’m worried the screen is too small'."
+            },
+            {
+              "stem": "Which laptop will she probably choose?",
+              "options": [
+                "The light, cheaper one",
+                "The used one",
+                "The larger, more expensive one",
+                "None of them"
+              ],
+              "correct": 2,
+              "explanation": "She says, 'I think that’s the better option' when referring to the larger, more expensive one."
+            }
+          ],
+          "audioFile": "listening-p2_01-woman-im-looking-for-a-lapto.mp3"
+        },
+        {
+          "id": "P2_02",
+          "script": "Man: You look exhausted. Did you stay up late studying again?\nWoman: Yes, and I still don’t feel ready for the biology exam. There’s just too much to memorize.\nMan: Have you tried studying with diagrams instead of only reading your notes?\nWoman: Not really. I usually just read everything again and again.\nMan: That might be the problem. My sister studies science that way, and she says drawing processes helps her remember them.\nWoman: That makes sense, especially for topics like the circulatory system.\nMan: I can help you after class if you want.\nWoman: I’d appreciate that. Maybe we can review the hardest chapters together.",
+          "questions": [
+            {
+              "stem": "Why is the woman tired?",
+              "options": [
+                "She worked a night shift.",
+                "She stayed up studying.",
+                "She traveled last night.",
+                "She is feeling sick."
+              ],
+              "correct": 1,
+              "explanation": "She says, 'Yes, and I still don’t feel ready for the biology exam. There’s just too much to memorize.'"
+            },
+            {
+              "stem": "What problem does the woman mention?",
+              "options": [
+                "She missed the exam date.",
+                "She lost her notes.",
+                "She has too much to memorize.",
+                "She dislikes biology class."
+              ],
+              "correct": 2,
+              "explanation": "She mentions there is 'just too much to memorize'."
+            },
+            {
+              "stem": "What study method does the man suggest?",
+              "options": [
+                "Recording the lectures",
+                "Reading faster",
+                "Making diagrams",
+                "Using flashcards only"
+              ],
+              "correct": 2,
+              "explanation": "He asks, 'Have you tried studying with diagrams instead of only reading your notes?'"
+            },
+            {
+              "stem": "What will they probably do later?",
+              "options": [
+                "Meet to study together",
+                "Talk to the professor",
+                "Skip the class",
+                "Take the exam"
+              ],
+              "correct": 0,
+              "explanation": "She says, 'Maybe we can review the hardest chapters together.'"
+            }
+          ],
+          "audioFile": "listening-p2_02-man-you-look-exhausted-did-y.mp3"
+        },
+        {
+          "id": "P2_03",
+          "script": "Woman: I saw the ad for the apartment downtown. Is it still available?\nMan: Yes, but several people have already asked about it.\nWoman: Can you tell me what’s included in the rent?\nMan: Water and internet are included, but electricity is separate.\nWoman: I work from home, so reliable internet is important. Is the area quiet?\nMan: Usually yes, although there’s a market nearby that gets busy on weekends.\nWoman: That’s fine. Could I come see it tomorrow evening?\nMan: Tomorrow is full, but I have an opening on Saturday morning.\nWoman: Perfect. Please put me down for that.",
+          "questions": [
+            {
+              "stem": "Why did the woman call?",
+              "options": [
+                "To complain about noise",
+                "To rent an apartment",
+                "To cancel a visit",
+                "To ask for internet service"
+              ],
+              "correct": 1,
+              "explanation": "She is inquiring about an apartment advertisement."
+            },
+            {
+              "stem": "What is included in the rent?",
+              "options": [
+                "Electricity and water",
+                "Water and internet",
+                "Internet and parking",
+                "Electricity and parking"
+              ],
+              "correct": 1,
+              "explanation": "The man states, 'Water and internet are included, but electricity is separate'."
+            },
+            {
+              "stem": "Why is internet important to the woman?",
+              "options": [
+                "She studies online at night.",
+                "She runs a market.",
+                "She works from home.",
+                "She streams movies professionally."
+              ],
+              "correct": 2,
+              "explanation": "She says, 'I work from home, so reliable internet is important'."
+            },
+            {
+              "stem": "When will she visit the apartment?",
+              "options": [
+                "Tomorrow evening",
+                "Saturday morning",
+                "Sunday afternoon",
+                "This weekend at night"
+              ],
+              "correct": 1,
+              "explanation": "The man mentions an opening on Saturday morning, and she agrees."
+            }
+          ],
+          "audioFile": "listening-p2_03-woman-i-saw-the-ad-for-the-ap.mp3"
+        },
+        {
+          "id": "P2_04",
+          "script": "Man: Welcome back, everyone. Before we start the tour, I need to make one announcement.\nWoman: Is it about the boat trip this afternoon?\nMan: Yes. Because the wind is getting stronger, the captain has canceled it for safety reasons.\nWoman: Oh no. That was the activity I was most excited about.\nMan: I understand, so we arranged a visit to the history museum instead. Transportation will leave in twenty minutes.\nWoman: Will the museum visit cost extra?\nMan: No, it’s included in your package.\nWoman: All right. Then I’ll go tell the others.",
+          "questions": [
+            {
+              "stem": "What has been canceled?",
+              "options": [
+                "A city tour",
+                "A museum visit",
+                "A boat trip",
+                "A dinner event"
+              ],
+              "correct": 2,
+              "explanation": "The man says the captain has canceled the boat trip."
+            },
+            {
+              "stem": "Why was it canceled?",
+              "options": [
+                "The group was late.",
+                "The weather was unsafe.",
+                "The captain was absent.",
+                "The boat was too small."
+              ],
+              "correct": 1,
+              "explanation": "The cancellation was due to the wind getting stronger (unsafe weather)."
+            },
+            {
+              "stem": "What was arranged instead?",
+              "options": [
+                "A shopping trip",
+                "A beach walk",
+                "A history museum visit",
+                "A free afternoon"
+              ],
+              "correct": 2,
+              "explanation": "They arranged a visit to the history museum instead."
+            },
+            {
+              "stem": "What will the woman probably do next?",
+              "options": [
+                "Ask for a refund",
+                "Leave the group",
+                "Call the captain",
+                "Inform the other people"
+              ],
+              "correct": 3,
+              "explanation": "She says, 'All right. Then I’ll go tell the others'."
+            }
+          ],
+          "audioFile": "listening-p2_04-man-welcome-back-everyone-b.mp3"
+        },
+        {
+          "id": "P2_05",
+          "script": "Woman: I noticed your report was submitted after the deadline. Is everything okay?\nMan: Mostly, yes. My computer froze the night before, and I lost the final version.\nWoman: That’s frustrating. Did you have a backup copy?\nMan: Only an older draft, so I had to rewrite the conclusion in the morning.\nWoman: I see. The content is strong, but next time please email me before the deadline if there’s a problem.\nMan: You’re right. I should have done that.\nWoman: I won’t reduce your grade this time, but I need the corrected chart by Friday.\nMan: No problem. I’ll send it tomorrow.",
+          "questions": [
+            {
+              "stem": "Why was the report late?",
+              "options": [
+                "The man forgot the deadline.",
+                "The internet stopped working.",
+                "The man lost the final version.",
+                "The woman changed the instructions."
+              ],
+              "correct": 2,
+              "explanation": "The man mentions his computer froze and he lost the final version."
+            },
+            {
+              "stem": "What did the man still have?",
+              "options": [
+                "A printed copy",
+                "An older draft",
+                "The chart file",
+                "A classmate’s report"
+              ],
+              "correct": 1,
+              "explanation": "He says he only had an older draft."
+            },
+            {
+              "stem": "What does the woman say about the report?",
+              "options": [
+                "It is incomplete.",
+                "The content is strong.",
+                "It needs a new topic.",
+                "The conclusion is confusing."
+              ],
+              "correct": 1,
+              "explanation": "She states, 'The content is strong'."
+            },
+            {
+              "stem": "What must the man do by Friday?",
+              "options": [
+                "Rewrite the whole report",
+                "Meet with the woman",
+                "Correct the chart",
+                "Submit a backup copy"
+              ],
+              "correct": 2,
+              "explanation": "The woman says, 'I need the corrected chart by Friday'."
+            }
+          ],
+          "audioFile": "listening-p2_05-woman-i-noticed-your-report-w.mp3"
+        }
+      ]
+    },
+    {
+      "id": "listening_part3",
+      "title": "Listening Part 3: Short Talks",
+      "levelRange": "B2",
+      "skill": "listening",
+      "moduleType": "listening_set",
+      "items": [
+        {
+          "id": "P3_01",
+          "script": "Good morning, passengers. This is an announcement for Flight 782 to Porto Alegre. Boarding will begin about thirty minutes later than scheduled because the aircraft arrived late from its previous destination. We expect boarding to start at Gate 6 at 10:40. Please keep your boarding pass ready and stay near the gate area. Passengers needing special assistance or traveling with small children will be invited to board first. We apologize for the delay and thank you for your patience.",
+          "questions": [
+            {
+              "stem": "What is the main purpose of the talk?",
+              "options": [
+                "To advertise a new flight",
+                "To explain airport security rules",
+                "To announce a boarding delay",
+                "To cancel a trip completely"
+              ],
+              "correct": 2,
+              "explanation": "The announcement is specifically about a boarding delay."
+            },
+            {
+              "stem": "Why is the flight delayed?",
+              "options": [
+                "The weather is too bad.",
+                "The aircraft arrived late.",
+                "The gate has changed.",
+                "The crew is missing."
+              ],
+              "correct": 1,
+              "explanation": "The announcement says the delay is 'because the aircraft arrived late from its previous destination'."
+            },
+            {
+              "stem": "Who will probably board first?",
+              "options": [
+                "Business travelers",
+                "Passengers with no luggage",
+                "People in window seats",
+                "Passengers needing assistance and families with small children"
+              ],
+              "correct": 3,
+              "explanation": "The announcement says passengers needing special assistance or with small children will be invited to board first."
+            },
+            {
+              "stem": "What should passengers do now?",
+              "options": [
+                "Go to another airport",
+                "Wait near Gate 6",
+                "Check in again",
+                "Collect their luggage"
+              ],
+              "correct": 1,
+              "explanation": "The announcement says they expect boarding to start at Gate 6 and to stay near the gate area."
+            }
+          ],
+          "audioFile": "listening-p3_01-good-morning-passengers-this.mp3"
+        },
+        {
+          "id": "P3_02",
+          "script": "Today I want to talk about the benefits of joining a community garden. First, it gives people a chance to grow fresh food even if they do not have a yard at home. Second, it helps neighbors get to know one another, which can make a neighborhood feel safer and friendlier. Community gardens also teach practical skills, such as how to prepare soil, water plants properly, and recognize common pests. Of course, gardening takes time and patience, and not every plant grows successfully. Still, many people say the experience is rewarding because they can see the direct results of their work over time.",
+          "questions": [
+            {
+              "stem": "What is the speaker mainly discussing?",
+              "options": [
+                "How to start a farm business",
+                "The benefits of community gardens",
+                "Why food prices are rising",
+                "A problem with insects in cities"
+              ],
+              "correct": 1,
+              "explanation": "The talk is about the benefits of joining a community garden."
+            },
+            {
+              "stem": "What is one social benefit mentioned?",
+              "options": [
+                "People save on transportation.",
+                "Children get better grades.",
+                "Neighbors get to know each other.",
+                "Cities become less crowded."
+              ],
+              "correct": 2,
+              "explanation": "The speaker says it helps neighbors get to know one another."
+            },
+            {
+              "stem": "What practical skills can people learn?",
+              "options": [
+                "Cooking restaurant meals",
+                "Selling vegetables online",
+                "Designing parks",
+                "Soil preparation and plant care"
+              ],
+              "correct": 3,
+              "explanation": "The speaker mentions skills like preparing soil, watering plants, and recognizing pests."
+            },
+            {
+              "stem": "What is the speaker’s attitude toward community gardening?",
+              "options": [
+                "Mostly positive",
+                "Deeply critical",
+                "Uncertain and confused",
+                "Completely uninterested"
+              ],
+              "correct": 0,
+              "explanation": "The speaker describes the experience as 'rewarding'."
+            }
+          ],
+          "audioFile": "listening-p3_02-today-i-want-to-talk-about-the.mp3"
+        }
+      ]
+    },
+    {
+      "id": "P3_03",
+      "audioFile": "TTS Task 6-27-2026, 10-09-59 AM.mp3",
+      "script": "Attention North Park residents. This is a reminder that there will be a temporary interruption of water service in your area overnight. The interruption is necessary because the city is replacing an old underground pipe to improve system reliability. Water service will be cut off from 10:00 p.m. tonight until about 6:00 a.m. tomorrow morning. Residents are strongly advised to store enough water for drinking and basic cleaning before 10:00 p.m. Please avoid using washing machines or dishwashers until service is fully restored to prevent any issues. For those who cannot store enough water, a supply tank with bottled water will be located at the North Park Community Center. This service is mainly intended for elderly residents and others with urgent needs. We apologize for any inconvenience.",
+      "questions": [
+        {
+          "stem": "Why will the water service be interrupted?",
+          "options": [
+            "A storm damaged the water tower",
+            "The city is replacing an old underground pipe",
+            "Workers are cleaning the water tanks",
+            "There is a problem at the community center"
+          ],
+          "correct": 1,
+          "explanation": "The announcement states the interruption is because the city is replacing an old underground pipe."
+        },
+        {
+          "stem": "When will the interruption take place?",
+          "options": [
+            "From 6:00 p.m. to 10:00 p.m.",
+            "From midnight to 8:00 a.m.",
+            "From 10:00 p.m. to about 6:00 a.m.",
+            "From 8:00 a.m. to noon"
+          ],
+          "correct": 2,
+          "explanation": "The water service will be cut off from 10:00 p.m. tonight until about 6:00 a.m. tomorrow morning."
+        },
+        {
+          "stem": "What are residents advised to do before 10:00 p.m.?",
+          "options": [
+            "Turn off all lights",
+            "Store enough water for drinking and basic cleaning",
+            "Visit the city office",
+            "Move to another neighborhood"
+          ],
+          "correct": 1,
+          "explanation": "Residents are advised to store enough water for drinking and basic cleaning before the service is cut."
+        },
+        {
+          "stem": "Which activity should residents avoid until service is fully restored?",
+          "options": [
+            "Cooking breakfast",
+            "Taking the bus",
+            "Using washing machines or dishwashers",
+            "Watching television"
+          ],
+          "correct": 2,
+          "explanation": "The announcement asks residents to avoid using washing machines or dishwashers."
+        },
+        {
+          "stem": "Who is the supply tank with bottled water mainly intended for?",
+          "options": [
+            "Children and teenagers",
+            "City workers only",
+            "Tourists staying in hotels",
+            "Elderly residents and others with urgent needs"
+          ],
+          "correct": 3,
+          "explanation": "The bottled water is mainly intended for elderly residents and others with urgent needs."
+        },
+        {
+          "stem": "Where will the supply tank with bottled water be located?",
+          "options": [
+            "City hall",
+            "North Park Community Center",
+            "Museum lobby",
+            "Main library"
+          ],
+          "correct": 1,
+          "explanation": "The supply tank will be located at the North Park Community Center."
+        },
+        {
+          "stem": "What two main uses of stored water does the reminder mention?",
+          "options": [
+            "Gardening and car washing",
+            "Drinking and basic cleaning",
+            "Painting and cooking",
+            "Watering plants and showering"
+          ],
+          "correct": 1,
+          "explanation": "The reminder mentions storing water for drinking and basic cleaning."
+        },
+        {
+          "stem": "Why is it important to prepare before 10:00 p.m.?",
+          "options": [
+            "To avoid traffic",
+            "Because service stops at 10:00 p.m.",
+            "To meet city workers",
+            "To receive bottled water"
+          ],
+          "correct": 1,
+          "explanation": "Preparation is needed because the water service will be cut off at 10:00 p.m."
+        },
+        {
+          "stem": "The interruption will happen during the daytime.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 1,
+          "explanation": "The interruption happens overnight (10 p.m. to 6 a.m.)."
+        },
+        {
+          "stem": "The announcement is for residents of North Park.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 0,
+          "explanation": "The announcement explicitly addresses North Park residents."
+        },
+        {
+          "stem": "Residents are encouraged to use dishwashers during the interruption.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 1,
+          "explanation": "Residents are asked to avoid using dishwashers until service is restored."
+        }
+      ]
+    },
+    {
+      "id": "P3_04",
+      "title": "Performance Optimization: The Science of Getting Unstuck",
+      "audioFile": "TTS Task 6-27-2026, 10-12-05 AM.mp3",
+      "script": "When we feel stuck on a problem, many of us tend to stay at our desks and try even harder to find a solution. However, this often leads to repetitive thinking, where we just keep circling the same wrong ideas. Short walks can be a powerful tool to break this cycle. By changing your physical environment, you interrupt that repetitive loop and allow your brain to approach the problem from a new angle. For example, a design team I know holds ten-minute walking meetings whenever they cannot agree on a solution. They've found that moving together makes the conversation calmer and more creative. Now, a word of caution: walking is not a replacement for focused work at a desk. It is simply one tool among others. Once you've had your breakthrough during a walk, you must still return to your desk to do the actual work of implementing the solution. So, the next time your thinking starts to go in circles, just stand up and take a short walk.",
+      "questions": [
+        {
+          "stem": "What do many people usually do when they feel stuck on a problem?",
+          "options": [
+            "Take a long vacation",
+            "Stay at their desks and try harder",
+            "Immediately ask their manager",
+            "Switch to another job"
+          ],
+          "correct": 1,
+          "explanation": "The speaker says many people tend to stay at their desks and try even harder."
+        },
+        {
+          "stem": "How can short walks be helpful?",
+          "options": [
+            "They make people work faster",
+            "They change your environment and interrupt repetitive thinking",
+            "They replace the need for meetings",
+            "They stop people from talking to each other"
+          ],
+          "correct": 1,
+          "explanation": "Short walks change the environment and interrupt repetitive thinking loops."
+        },
+        {
+          "stem": "What does the design team mentioned in the talk do when they cannot agree on a solution?",
+          "options": [
+            "Cancel the project",
+            "Work overtime at their desks",
+            "Hold 10-minute walking meetings",
+            "Ask another team to decide"
+          ],
+          "correct": 2,
+          "explanation": "The design team holds ten-minute walking meetings when they disagree."
+        },
+        {
+          "stem": "According to the speaker, how do these walking meetings affect conversations?",
+          "options": [
+            "They become louder and more stressful",
+            "They become calmer and more creative",
+            "They become shorter but more confusing",
+            "They become less frequent"
+          ],
+          "correct": 1,
+          "explanation": "The speaker notes that moving together makes conversations calmer and more creative."
+        },
+        {
+          "stem": "What important warning does the speaker give about walking?",
+          "options": [
+            "It can completely replace focused work",
+            "It is only useful for managers",
+            "It is not helpful for decision making",
+            "It is not a replacement for focused work at a desk"
+          ],
+          "correct": 3,
+          "explanation": "The speaker warns that walking is not a replacement for focused work at a desk."
+        },
+        {
+          "stem": "Why might walking help people suggest more creative ideas?",
+          "options": [
+            "Faster heart rate",
+            "Interrupts repetitive thinking",
+            "Better oxygen to brain",
+            "More social interaction"
+          ],
+          "correct": 1,
+          "explanation": "Walking interrupts the repetitive loop of thinking, allowing for a new angle."
+        },
+        {
+          "stem": "What should people still do after taking a walk, according to the speaker?",
+          "options": [
+            "Take a nap",
+            "Go home",
+            "Return to desk for focused work",
+            "Call a manager"
+          ],
+          "correct": 2,
+          "explanation": "People must still return to their desks to implement the solution."
+        },
+        {
+          "stem": "What does the speaker suggest you do if your thinking “starts to go in circles”?",
+          "options": [
+            "Drink coffee",
+            "Try harder",
+            "Take a short walk",
+            "Write a list"
+          ],
+          "correct": 2,
+          "explanation": "The speaker suggests taking a short walk when thinking goes in circles."
+        },
+        {
+          "stem": "The speaker says walking meetings should last at least one hour.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 1,
+          "explanation": "The design team mentioned holds ten-minute walking meetings."
+        },
+        {
+          "stem": "Walking is presented as one tool among others for solving problems.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 0,
+          "explanation": "The speaker says it is 'simply one tool among others'."
+        },
+        {
+          "stem": "The design team never disagrees on solutions anymore.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 1,
+          "explanation": "They use walking meetings *when* they cannot agree, not that they never disagree."
+        }
+      ]
+    },
+    {
+      "id": "P3_05",
+      "audioFile": "TTS Task 6-27-2026, 10-02-34 AM.mp3",
+      "script": "Hello everyone, and thank you so much for volunteering at the city museum. We are very excited to have you on board. Please listen carefully to the following instructions. All volunteers should arrive at the museum fifteen minutes before their shift starts. This extra time is important so you can collect your name badges and leave your bags in the staff room before heading to your posts. Most of you will be stationed in the main wings to help visitors find the correct galleries. If a visitor asks a question that you cannot answer, please do not guess; instead, kindly send them to the information desk located in the main lobby. Regarding food and drinks, please remember that they are strictly banned in the exhibition rooms to protect the artwork. You may have your snacks and beverages in the staff room, but please finish them before you begin your shift. Thank you again for your help!",
+      "questions": [
+        {
+          "stem": "What is the main purpose of this announcement?",
+          "options": [
+            "To advertise a new museum exhibition",
+            "To thank visitors for coming",
+            "To give instructions to museum volunteers",
+            "To invite people to a concert"
+          ],
+          "correct": 2,
+          "explanation": "The announcement is intended to give instructions to museum volunteers."
+        },
+        {
+          "stem": "When should volunteers arrive before their shift starts?",
+          "options": [
+            "5 minutes before",
+            "10 minutes before",
+            "15 minutes before",
+            "30 minutes before"
+          ],
+          "correct": 2,
+          "explanation": "Volunteers are asked to arrive fifteen minutes before their shift starts."
+        },
+        {
+          "stem": "Why should volunteers arrive early?",
+          "options": [
+            "To buy tickets at the entrance",
+            "To collect their name badges and leave their bags in the staff room",
+            "To have a full tour of the museum",
+            "To meet the mayor"
+          ],
+          "correct": 1,
+          "explanation": "They arrive early to collect badges and store their bags."
+        },
+        {
+          "stem": "What will most volunteers do during the event?",
+          "options": [
+            "Guide school groups around the city",
+            "Help visitors find the correct galleries",
+            "Sell food and drinks in the café",
+            "Work in the museum office"
+          ],
+          "correct": 1,
+          "explanation": "Most will be stationed in the main wings to help visitors find galleries."
+        },
+        {
+          "stem": "What should volunteers do if they cannot answer a visitor’s question?",
+          "options": [
+            "Guess the answer",
+            "Tell the visitor to search online",
+            "Ignore the question",
+            "Send the visitor to the information desk"
+          ],
+          "correct": 3,
+          "explanation": "Volunteers are instructed to send visitors to the information desk if they can't answer."
+        },
+        {
+          "stem": "What rule about food and drinks is mentioned?",
+          "options": [
+            "They are allowed everywhere in the museum",
+            "They are only allowed in the staff room",
+            "They are not allowed in the exhibition rooms",
+            "They must be shared with visitors"
+          ],
+          "correct": 2,
+          "explanation": "Food and drinks are strictly banned in the exhibition rooms."
+        },
+        {
+          "stem": "Where is the information desk located?",
+          "options": [
+            "Staff room",
+            "Main lobby",
+            "Exit gate",
+            "Café"
+          ],
+          "correct": 1,
+          "explanation": "The information desk is located in the main lobby."
+        },
+        {
+          "stem": "What should volunteers do with their bags before starting their shift?",
+          "options": [
+            "Keep with them",
+            "Leave in staff room",
+            "Give to security",
+            "Put in lockers"
+          ],
+          "correct": 1,
+          "explanation": "They should leave their bags in the staff room."
+        },
+        {
+          "stem": "When should volunteers finish their food and drinks?",
+          "options": [
+            "During shift",
+            "Before shift",
+            "In galleries",
+            "At lunch break"
+          ],
+          "correct": 1,
+          "explanation": "They should finish their food and drinks before they begin their shift."
+        },
+        {
+          "stem": "Volunteers are told to guess if they do not know an answer.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 1,
+          "explanation": "The speaker explicitly says 'please do not guess'."
+        },
+        {
+          "stem": "The announcement thanks volunteers for helping at the museum.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 0,
+          "explanation": "The speaker starts and ends by thanking the volunteers."
+        },
+        {
+          "stem": "Food and drinks are banned in the exhibition rooms.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct": 0,
+          "explanation": "Food and drinks are strictly banned in the exhibition rooms."
+        }
+      ]
+    }
+  ]
+}

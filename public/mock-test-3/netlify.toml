@@ -1,0 +1,12 @@
+{{
+  "version": 2,
+  "builder": "builder",
+  "functions": "netlify/functions",
+  "build": {
+    "base": ".",
+    "publish": "htmlDelivery",
+    "publish": {
+      "exclude": ["**/\!*.{}", "/transcripts/*", "/assets/audio/*"]
+    }
+  }
+}

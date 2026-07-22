@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- MET Practice Platform -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <title>MET Proficiency Platform</title>
+    <meta name="description" content="MET test prep platform for nurses and healthcare professionals. AI-powered diagnosis, homework, and feedback cycle for the Michigan English Test." />
+    <meta property="og:title" content="MET Proficiency Platform" />
+    <meta property="og:description" content="MET test prep platform for nurses and healthcare professionals." />
+    <meta property="og:type" content="website" />
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function() {
+        var dictionaryWindow = null;
+        document.addEventListener('dblclick', function(e) {
+          var sel = window.getSelection();
+          var word = (sel.toString() || '').trim();
+          if (!word || word.length < 2 || word.length > 30 || /\s/.test(word) || /\d/.test(word)) return;
+          var url = 'https://dictionary.cambridge.org/dictionary/english/' + encodeURIComponent(word.toLowerCase());
+          var w = 520, h = 700;
+          var left = Math.round(screen.width / 2 - w / 2);
+          var top = Math.round(screen.height / 2 - h / 2);
+          if (dictionaryWindow && !dictionaryWindow.closed) {
+            dictionaryWindow.location.href = url;
+            dictionaryWindow.focus();
+          } else {
+            dictionaryWindow = window.open(url, 'cambridge_dict', 'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top + ',scrollbars=yes,resizable=yes');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

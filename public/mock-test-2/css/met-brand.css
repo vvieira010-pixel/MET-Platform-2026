@@ -1,0 +1,45 @@
+/* ============================================================
+   met-brand.css — MET Prep Platform Design Tokens
+   Pine teal (primary) with optional accent
+   Single source of truth for all pages
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+   /* ── Pine Palette ─────────────────────────────────────── */
+   --pine-deep:   #014c47;
+   --pine-darker: #015f58;
+   --pine-dark:   #016d63;
+   --pine:        #01796F;
+   --pine-light:  #6FA8A0;
+   --pine-lighter:#A0C8C0;
+   --pine-lightest:#D0E8E5;
+
+   /* ── Orange / Amber Accent (now mapped to pine for primary) ───── */
+   --orange:       #01796F;  /* primary CTA, active states        */
+   --orange-dark:  #015F58;  /* hover on orange                   */
+   --orange-light: #6FA8A0;  /* soft variant, badges              */
+   --orange-bg:    #D0E8E5;  /* tinted surface for orange items   */
+
+   /* ── MET Brand Shorthand ─────────────────────────────────── */
+   --met-navy:   #0F1F4D;   /* kept for backward compat if needed */
+   --met-blue:   #2B6097;
+   --met-sky:    #AED6F1;
+   --met-wash:   #EBF4FB;
+   --met-light:  #F5F8FC;
+   --met-slate:  #4A5568;
+
+   /* ── Font Stack ──────────────────────────────────────────── */
+   --met-font-heading:    "Plus Jakarta Sans", "Aptos", "Segoe UI", system-ui, sans-serif;
+   --met-font-subheading: "Plus Jakarta Sans", "Aptos", "Segoe UI", system-ui, sans-serif;
+   --met-font-body:       "Plus Jakarta Sans", "Aptos", "Segoe UI", system-ui, sans-serif;
+   --font:                var(--met-font-body);
+
+   /* ── Semantic Aliases ────────────────────────────────────── */
+   --navy:        var(--pine-deep);
+   --navy-dark:   var(--pine-deep);
+   --navy-light:  var(--pine);
+   --sky:         var(--pine-dark);
+   --sky-light:   var(--pine-light);
+   --wash:        var(--pine-lightest);
+   --bg-wash:     var(--pine-lightest);
+}

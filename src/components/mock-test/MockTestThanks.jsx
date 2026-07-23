@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
 import { MOCK_TEST_1 } from '../../data/mock-test-1/index.js';
-import { scoreReading, scoreListening } from '../../lib/mock-test-scoring.js';
+import { MOCK_TEST_2 } from '../../data/mock-test-2/index.js';
+import { scoreReading, scoreListening, scoreReading2, scoreListening2 } from '../../lib/mock-test-scoring.js';
 import { saveMockTestResult } from '../../lib/workflow.js';
 import { uploadMockTestAudio } from '../../lib/supabase-db.js';
 import { getCefrLevelFromPercent, getCefrColor, getCefrLongLabel, getCefrDescription, CEFR_CONFIG } from './constants.js';
 import { Button } from '../ui/Button.jsx';
 import { Icon } from '../shared.jsx';
 
-export default function MockTestThanks({ answers, student, onBack }) {
+const TEST_META = {
+  'mock-test-1': { data: MOCK_TEST_1, scoreReading, scoreListening },
+  'mock-test-2': { data: MOCK_TEST_2, scoreReading: scoreReading2, scoreListening: scoreListening2 },
+};
+
+export default function MockTestThanks({ answers, student, onBack, testId = 'mock-test-1' }) {
+  const meta = TEST_META[testId] || TEST_META['mock-test-1'];
   const [status, setStatus] = useState('saving');
   const [readingScore, setReadingScore] = useState(null);
   const [listeningScore, setListeningScore] = useState(null);
@@ -20,8 +27,8 @@ export default function MockTestThanks({ answers, student, onBack }) {
       try {
         setStatus('saving');
 
-        const reading = scoreReading(answers);
-        const listening = scoreListening(answers);
+        const reading = meta.scoreReading(answers);
+        const listening = meta.scoreListening(answers);
         if (!cancelled) { setReadingScore(reading); setListeningScore(listening); }
 
         const combinedTotal = reading.total + listening.total;
@@ -38,7 +45,7 @@ export default function MockTestThanks({ answers, student, onBack }) {
           try {
             const resp = await fetch(answers[idx]);
             const blob = await resp.blob();
-            const path = `mock1/${student?.email || 'anon'}/speaking_task${idx}_${Date.now()}.webm`;
+            const path = `${testId}/${student?.email || 'anon'}/speaking_task${idx}_${Date.now()}.webm`;
             const savedPath = await uploadMockTestAudio(blob, path);
             speakingRecordings[idx] = savedPath;
           } catch {
@@ -50,8 +57,8 @@ export default function MockTestThanks({ answers, student, onBack }) {
           studentId: student?.local_id || student?.id || '',
           studentName: student?.name || student?.firstName || '',
           studentEmail: student?.email || '',
-          testId: 'mock-test-1',
-          testTitle: MOCK_TEST_1.title,
+          testId,
+          testTitle: meta.data.title,
           answers,
           scores: {
             reading: { total: reading.total, max: reading.max, details: reading.details, cefr: getCefrLevelFromPercent(reading.max > 0 ? Math.round((reading.total / reading.max) * 100) : 0) },
@@ -69,10 +76,10 @@ export default function MockTestThanks({ answers, student, onBack }) {
         }
 
         try {
-          localStorage.setItem('met:mock1:submission', JSON.stringify(payload));
+          localStorage.setItem(`met:${testId}:submission`, JSON.stringify(payload));
         } catch {}
 
-        MOCK_TEST_1.sections.forEach(s => {
+        meta.data.sections.forEach(s => {
           try { localStorage.removeItem(`met:timer:${s.id}`); } catch {}
           try { sessionStorage.removeItem(`met:section:${s.id}:answers`); } catch {}
         });
@@ -83,7 +90,7 @@ export default function MockTestThanks({ answers, student, onBack }) {
       }
     })();
     return () => { cancelled = true; };
-  }, [answers, student]);
+  }, [answers, student, testId]);
 
   if (status !== 'done') {
     const isSaving = status === 'saving';
@@ -128,7 +135,7 @@ export default function MockTestThanks({ answers, student, onBack }) {
       <article className="mtr card">
         <header className="mtr__header">
           <h1 className="mtr__title">Mock Test Results</h1>
-          <p className="mtr__subtitle">{MOCK_TEST_1.title}</p>
+          <p className="mtr__subtitle">{meta.data.title}</p>
 
           <div className="mtr__badge" style={{ background: cefrColor }}>{cefr}</div>
           <div className="mtr__score">{combinedTotal} / {combinedMax}</div>

@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { V3MockTestAdapter } from './application/V3MockTestAdapter.js';
 import { MOCK_TEST_1 } from '../../data/mock-test-1/index.js';
 import { MOCK_TEST_2 } from '../../data/mock-test-2/index.js';
+import { READING_PART1 as MT2_READING_P1, READING_PART2 as MT2_READING_P2, READING_PART3 as MT2_READING_P3 } from '../../data/mock-test-2/reading.js';
+import { LISTENING_PART1 as MT2_LISTENING_P1, LISTENING_PART2 as MT2_LISTENING_P2, LISTENING_PART3 as MT2_LISTENING_P3 } from '../../data/mock-test-2/listening.js';
+import { SPEAKING_TASKS as MT2_SPEAKING_TASKS } from '../../data/mock-test-2/speaking.js';
+import { WRITING_TASKS as MT2_WRITING_TASKS } from '../../data/mock-test-2/writing.js';
 import SectionShell from './SectionShell.jsx';
 import ReadingSection from './ReadingSection.jsx';
 import ListeningSection from './ListeningSection.jsx';
@@ -21,6 +25,13 @@ const TEST_CONFIGS = {
     data: MOCK_TEST_2,
     storagePrefix: 'met:mock2',
   },
+};
+
+const MOCK_TEST_2_DATA = {
+  reading: { PART1: MT2_READING_P1, PART2: MT2_READING_P2, PART3: MT2_READING_P3 },
+  listening: { PART1: MT2_LISTENING_P1, PART2: MT2_LISTENING_P2, PART3: MT2_LISTENING_P3 },
+  speaking: { TASKS: MT2_SPEAKING_TASKS },
+  writing: { TASKS: MT2_WRITING_TASKS },
 };
 
 function MockTestHome({ sections, completedSections, onStart, onBack, title }) {
@@ -169,11 +180,13 @@ export default function MockTestEngine({ student, onBack, testId = 'mock-test-1'
   }
 
   const renderSection = (section) => {
+    const isMock2 = testId === 'mock-test-2';
+    const wrap = (answers) => handleSectionComplete(section.id, answers);
     switch (section.id) {
-      case 'reading': return <ReadingSection onComplete={handleSectionComplete} />;
-      case 'listening': return <ListeningSection onComplete={handleSectionComplete} />;
-      case 'speaking': return <SpeakingSection student={student} onComplete={handleSectionComplete} />;
-      case 'writing': return <WritingSection onComplete={handleSectionComplete} />;
+      case 'reading': return <ReadingSection onComplete={wrap} readingData={isMock2 ? MOCK_TEST_2_DATA.reading : undefined} />;
+      case 'listening': return <ListeningSection onComplete={wrap} listeningData={isMock2 ? MOCK_TEST_2_DATA.listening : undefined} />;
+      case 'speaking': return <SpeakingSection student={student} onComplete={wrap} speakingData={isMock2 ? MOCK_TEST_2_DATA.speaking : undefined} />;
+      case 'writing': return <WritingSection onComplete={wrap} writingData={isMock2 ? MOCK_TEST_2_DATA.writing : undefined} />;
       default: return null;
     }
   };
@@ -194,7 +207,7 @@ export default function MockTestEngine({ student, onBack, testId = 'mock-test-1'
         )}
         {phase === 'home' && session.isAllDone() && (
           <motion.div key="thanks-home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <MockTestThanks answers={session.answers} student={student} onBack={onBack} />
+            <MockTestThanks answers={session.answers} student={student} onBack={onBack} testId={testId} />
           </motion.div>
         )}
         {phase === 'section' && activeSection && (
@@ -212,7 +225,7 @@ export default function MockTestEngine({ student, onBack, testId = 'mock-test-1'
         )}
         {phase === 'thanks' && (
           <motion.div key="thanks" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <MockTestThanks answers={session.answers} student={student} onBack={onBack} />
+            <MockTestThanks answers={session.answers} student={student} onBack={onBack} testId={testId} />
           </motion.div>
         )}
       </AnimatePresence>

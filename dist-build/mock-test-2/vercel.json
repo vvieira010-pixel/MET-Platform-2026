@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "installCommand": "",
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/mock-home.html", "destination": "/sections/mock-home.html" },
+    { "source": "/", "destination": "/sections/mock-home.html" }
+  ]
+}

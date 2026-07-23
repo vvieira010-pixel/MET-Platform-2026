@@ -39,7 +39,7 @@ export function getAllReadingQuestions2() {
 
 export function getAllListeningQuestions2() {
   const qs = [];
-  MT2_LISTENING_PART1.conversations.forEach(c => qs.push(c));
+  MT2_LISTENING_PART1.questions.forEach(q => qs.push(q));
   MT2_LISTENING_PART2.conversations.forEach(c => c.questions.forEach(q => qs.push(q)));
   MT2_LISTENING_PART3.talks.forEach(t => t.questions.forEach(q => qs.push(q)));
   return qs;

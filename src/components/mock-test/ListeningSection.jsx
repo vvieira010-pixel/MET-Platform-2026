@@ -1,5 +1,5 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
-import { LISTENING_PART1, LISTENING_PART2, LISTENING_PART3 } from '../../data/mock-test-1/listening.js';
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import { LISTENING_PART1 as DEFAULT_PART1, LISTENING_PART2 as DEFAULT_PART2, LISTENING_PART3 as DEFAULT_PART3 } from '../../data/mock-test-1/listening.js';
 import { callAI } from '../../lib/callAI.js';
 import { fetchConversationAudio, fetchAudioWithGender } from '../../lib/tts-utils.js';
 import QuestionNav from './QuestionNav.jsx';
@@ -8,43 +8,6 @@ import NavButtons from './NavButtons.jsx';
 import { STORAGE_KEYS } from './constants.js';
 
 const PART3_VOICE_MAP = { 0: 'female', 1: 'male', 2: 'female', 3: 'male' };
-
-function flattenQuestions() {
-  const qs = [];
-  LISTENING_PART1.questions.forEach(q => qs.push({
-    ...q, audio: q.audio, isConversation: true, conversationId: `part1_${q.id}`,
-    scriptContext: q.text + ' ' + q.options.join(' '),
-    part: 1, partLabel: LISTENING_PART1.label, partInstructions: LISTENING_PART1.instructions
-  }));
-  LISTENING_PART2.conversations.forEach(c => {
-    const ctx = (c.questions || []).map(q => q.text + ' ' + q.options.join(' ')).join(' ');
-    c.questions.forEach(q => qs.push({
-      ...q, audio: c.audio, isConversation: true, conversationId: c.title,
-      scriptContext: ctx,
-      part: 2, partLabel: LISTENING_PART2.label, partInstructions: LISTENING_PART2.instructions
-    }));
-  });
-  LISTENING_PART3.talks.forEach((t, i) => {
-    const ctx = (t.questions || []).map(q => q.text + ' ' + q.options.join(' ')).join(' ');
-    t.questions.forEach(q => qs.push({
-      ...q, audio: t.audio, isConversation: false, conversationId: t.title,
-      scriptContext: ctx, talkVoice: PART3_VOICE_MAP[i] || 'female',
-      part: 3, partLabel: LISTENING_PART3.label, partInstructions: LISTENING_PART3.instructions
-    }));
-  });
-  return qs;
-}
-
-const QUESTIONS = flattenQuestions();
-
-const PART_BOUNDARIES = [];
-QUESTIONS.forEach((qq, i) => {
-  if (i === 0 || qq.part !== QUESTIONS[i - 1].part) {
-    PART_BOUNDARIES.push({ part: qq.part, label: qq.partLabel, startIdx: i });
-  }
-});
-
-const PART_LABELS = { 1: 'Part 1', 2: 'Part 2', 3: 'Part 3' };
 
 const CACHE_PREFIX = 'met:listening:audio:';
 
@@ -74,7 +37,51 @@ async function generateTalkAudio(context, gender) {
   return fetchAudioWithGender(clean, gender);
 }
 
-export default function ListeningSection({ onComplete }) {
+export default function ListeningSection({ onComplete, listeningData }) {
+  const PART1 = listeningData?.PART1 || DEFAULT_PART1;
+  const PART2 = listeningData?.PART2 || DEFAULT_PART2;
+  const PART3 = listeningData?.PART3 || DEFAULT_PART3;
+
+  const { questions: QUESTIONS, partBoundaries: PART_BOUNDARIES } = useMemo(() => {
+    const qs = [];
+    PART1.questions.forEach(q => qs.push({
+      ...q, audio: q.audio, isConversation: true, conversationId: `part1_${q.id}`,
+      scriptContext: q.text + ' ' + q.options.join(' '),
+      part: 1, partLabel: PART1.label, partInstructions: PART1.instructions
+    }));
+    PART2.conversations.forEach(c => {
+      const ctx = (c.questions || []).map(q => q.text + ' ' + q.options.join(' ')).join(' ');
+      c.questions.forEach(q => qs.push({
+        ...q, audio: c.audio, isConversation: true, conversationId: c.title,
+        scriptContext: ctx,
+        part: 2, partLabel: PART2.label, partInstructions: PART2.instructions
+      }));
+    });
+    PART3.talks.forEach((t, i) => {
+      const ctx = (t.questions || []).map(q => q.text + ' ' + q.options.join(' ')).join(' ');
+      t.questions.forEach(q => qs.push({
+        ...q, audio: t.audio, isConversation: false, conversationId: t.title,
+        scriptContext: ctx, talkVoice: PART3_VOICE_MAP[i] || 'female',
+        part: 3, partLabel: PART3.label, partInstructions: PART3.instructions
+      }));
+    });
+    const boundaries = [];
+    qs.forEach((qq, i) => {
+      if (i === 0 || qq.part !== qs[i - 1].part) {
+        boundaries.push({ part: qq.part, label: qq.partLabel, startIdx: i });
+      }
+    });
+    return { questions: qs, partBoundaries: boundaries };
+  }, [PART1, PART2, PART3]);
+
+  const PART_LABELS = useMemo(() => {
+    const labels = {};
+    if (PART1.questions.length > 0) labels[1] = 'Part 1';
+    if (PART2.conversations.length > 0) labels[2] = 'Part 2';
+    if (PART3.talks.length > 0) labels[3] = 'Part 3';
+    return labels;
+  }, [PART1, PART2, PART3]);
+
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selected, setSelected] = useState({});
   const [answered, setAnswered] = useState({});

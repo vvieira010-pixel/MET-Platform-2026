@@ -4,6 +4,7 @@ import { Card } from '../components/ui/Card.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import MockTestEngine from '../components/mock-test/MockTestEngine.jsx';
 import { getMockTestResults } from '../lib/workflow.js';
+import { dbList } from '../lib/supabase-db.js';
 import { getCefrColor } from '../data/mock-test-1/index.js';
 
 const UNLOCK_KEY_1 = 'vv:mock_test_1_unlocked';
@@ -40,15 +41,10 @@ const TESTS = [
     title: 'MET Mock Test 2',
     subtitle: 'Full-length practice exam · ~2 h 35 min',
     sections: [
-      { label: 'Writing Task 1', time: '45 min' },
-      { label: 'Writing Task 2', time: '30 min' },
-      { label: 'Listening Part 1', time: '25 min' },
-      { label: 'Listening Part 2', time: '25 min' },
-      { label: 'Listening Part 3', time: '25 min' },
-      { label: 'Reading Part 1', time: '65 min' },
-      { label: 'Reading Part 2', time: '65 min' },
-      { label: 'Reading Part 3', time: '65 min' },
+      { label: 'Reading & Grammar', time: '65 min' },
+      { label: 'Listening', time: '35 min' },
       { label: 'Speaking', time: '10 min' },
+      { label: 'Writing', time: '45 min' },
     ],
     description: 'Second full-length MET practice exam with updated content and new question sets.',
     unlockKey: UNLOCK_KEY_2,
@@ -71,6 +67,17 @@ export default function MockTestPage({ student, students, onNavigate, auth }) {
       getMockTestResults(sid).then(setPastResults).catch(e => console.warn('[mock-test] failed to load results:', e));
     }
   }, [selectedStudent]);
+
+  useEffect(() => {
+    const sid = selectedStudent?.id || selectedStudent?.local_id;
+    if (!sid || isTeacher) return;
+
+    dbList('assignments').then(all => {
+      const mine = (all || []).filter(a => a.student_id === sid);
+      if (mine.some(a => a.mock_test_id === 'mock-test-1')) setUnlocked1(true);
+      if (mine.some(a => a.mock_test_id === 'mock-test-2')) setUnlocked2(true);
+    }).catch(e => console.warn('[mock-test] failed to check assignments:', e));
+  }, [selectedStudent, isTeacher]);
 
   if (!selectedStudent && Array.isArray(students) && students.length > 0) {
     return (

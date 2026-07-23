@@ -1,9 +1,10 @@
 import { useState, useCallback, useEffect } from 'react';
-import { WRITING_TASKS } from '../../data/mock-test-1/writing.js';
+import { WRITING_TASKS as DEFAULT_TASKS } from '../../data/mock-test-1/writing.js';
 import { STORAGE_KEYS } from './constants.js';
 import NavButtons from './NavButtons.jsx';
 
-export default function WritingSection({ onComplete }) {
+export default function WritingSection({ onComplete, writingData }) {
+  const WRITING_TASKS = writingData?.TASKS || DEFAULT_TASKS;
   const [currentIdx, setCurrentIdx] = useState(0);
   const [texts, setTexts] = useState({});
 

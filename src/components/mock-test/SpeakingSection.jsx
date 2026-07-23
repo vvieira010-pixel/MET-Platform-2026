@@ -1,9 +1,10 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { SPEAKING_TASKS } from '../../data/mock-test-1/speaking.js';
+import { SPEAKING_TASKS as DEFAULT_TASKS } from '../../data/mock-test-1/speaking.js';
 import { Button } from '../ui/Button.jsx';
 import { Icon } from '../shared.jsx';
 
-export default function SpeakingSection({ onComplete }) {
+export default function SpeakingSection({ onComplete, speakingData }) {
+  const SPEAKING_TASKS = speakingData?.TASKS || DEFAULT_TASKS;
   const [currentIdx, setCurrentIdx] = useState(0);
   const [phase, setPhase] = useState('intro');
   const [prepRemaining, setPrepRemaining] = useState(0);
